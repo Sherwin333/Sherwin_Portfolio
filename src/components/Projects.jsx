@@ -5,21 +5,21 @@ const projects = [
     title: "NIDS – Network Intrusion Detection System",
     desc: "ML-powered network intrusion detection dashboard with live detection.",
     tech: ["Python", "ML-Alogrithms", "Honeypot", "Stream-lit"],
-    img: "/images/Picture1.png", 
+    img: "images/Picture1.png", 
     code: "https://github.com/Sherwin333/Network-Intrusion-Detection-System-NIDS-.git",
   },
   {
     title: "PawConnect – Pet Adoption App",
     desc: "Flutter app to discover, adopt & manage pet care tasks.",
     tech: ["Flutter", "MySQL"],
-    img: "/images/Picture2.png",
+    img: "images/Picture2.png",
     code: "https://github.com/Sherwin333/PawConnect-Flutter-App.git",
   },
   {
     title: "QPGS-Question Paper Generation System",
     desc: "Question Paper Generator",
     tech: ["Vite+React", "Node.js", "MongoDb"],
-    img: "/images/3.png",
+    img: "images/3.png",
     code: "https://github.com/Sherwin333/Question-Paper-Generation-System-QPGS-.git",
   },
 ];
@@ -42,7 +42,7 @@ export default function Projects() {
             >
               <div className="overflow-hidden">
                 <img
-                  src={p.img}
+                  src={`${process.env.PUBLIC_URL}/${p.img}`}
                   alt={p.title}
                   className="h-44 w-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
