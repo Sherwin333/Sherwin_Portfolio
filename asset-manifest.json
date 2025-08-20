@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Sherwin_Portfolio/static/css/main.989b79ba.css",
+    "main.js": "/Sherwin_Portfolio/static/js/main.ff4c5e28.js",
+    "static/js/453.ad7768ec.chunk.js": "/Sherwin_Portfolio/static/js/453.ad7768ec.chunk.js",
+    "index.html": "/Sherwin_Portfolio/index.html",
+    "main.989b79ba.css.map": "/Sherwin_Portfolio/static/css/main.989b79ba.css.map",
+    "main.ff4c5e28.js.map": "/Sherwin_Portfolio/static/js/main.ff4c5e28.js.map",
+    "453.ad7768ec.chunk.js.map": "/Sherwin_Portfolio/static/js/453.ad7768ec.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.989b79ba.css",
+    "static/js/main.ff4c5e28.js"
+  ]
+}
