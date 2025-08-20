@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Sherwin_Portfolio/static/css/main.989b79ba.css",
-    "main.js": "/Sherwin_Portfolio/static/js/main.5ba17ed7.js",
+    "main.js": "/Sherwin_Portfolio/static/js/main.9b5b7566.js",
     "static/js/453.ad7768ec.chunk.js": "/Sherwin_Portfolio/static/js/453.ad7768ec.chunk.js",
     "index.html": "/Sherwin_Portfolio/index.html",
     "main.989b79ba.css.map": "/Sherwin_Portfolio/static/css/main.989b79ba.css.map",
-    "main.5ba17ed7.js.map": "/Sherwin_Portfolio/static/js/main.5ba17ed7.js.map",
+    "main.9b5b7566.js.map": "/Sherwin_Portfolio/static/js/main.9b5b7566.js.map",
     "453.ad7768ec.chunk.js.map": "/Sherwin_Portfolio/static/js/453.ad7768ec.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.989b79ba.css",
-    "static/js/main.5ba17ed7.js"
+    "static/js/main.9b5b7566.js"
   ]
 }
