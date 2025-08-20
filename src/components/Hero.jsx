@@ -100,7 +100,7 @@ export default function Hero() {
         {/* Glow ring */}
         <div className="absolute -inset-2 bg-gradient-to-tr from-indigo-600 via-fuchsia-600 to-pink-600 rounded-full blur-2xl opacity-40 animate-pulse" />
         <img
-          src="/images/12.jpg" // put your image in public/images/profile.jpg
+          src={`${process.env.PUBLIC_URL}/images/12.jpg`} // put your image in public/images/profile.jpg
           alt="Sherwin"
           className="relative w-48 h-48 md:w-64 md:h-64 object-cover rounded-full border-4 border-white/10 shadow-2xl"
         />
