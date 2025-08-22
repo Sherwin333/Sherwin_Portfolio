@@ -46,7 +46,7 @@ export default function Hero() {
             View Projects
           </a>
           <a
-            href="https://drive.google.com/file/d/1LcPnGXdbubP1M-wwQg4qFbfqtFwYu-KX/view?usp=sharing"
+            href="https://drive.google.com/file/d/1qUQG1a9NOoedR7_6PPD8mNu6wWI_7oAN/view?usp=sharing"
             className="px-5 py-3 rounded-2xl border border-white/15 hover:bg-white/10"
           >
             Resume
