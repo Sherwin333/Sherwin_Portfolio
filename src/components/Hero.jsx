@@ -46,11 +46,21 @@ export default function Hero() {
             View Projects
           </a>
           <a
-            href="https://drive.google.com/file/d/1qUQG1a9NOoedR7_6PPD8mNu6wWI_7oAN/view?usp=sharing"
+            href="https://drive.google.com/file/d/1OIn3ezMKtwOaCpBpDt2UYYE-4c6zDOex/view"
+            className="px-5 py-3 rounded-2xl border border-white/15 hover:bg-white/10 mr-3"
+            target="_blank"
+              rel="noopener noreferrer"
+                  >
+              Resume
+          </a>
+
+          <a
+            href="https://drive.google.com/file/d/1qUQG1a9NOoedR7_6PPD8mNu6wWI_7oAN/view"
             className="px-5 py-3 rounded-2xl border border-white/15 hover:bg-white/10"
-          >
-            Resume
-            
+            target="_blank"
+              rel="noopener noreferrer"
+                  >
+              Detailed Resume
           </a>
         </div>
 
