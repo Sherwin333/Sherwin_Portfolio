@@ -17,7 +17,7 @@ It showcases my skills, projects, and experiences.
 - React Icons
 
 ## 🌐 Live Demo
-[Click here to view my portfolio](https://sherwin333.github.io/Sherwin_Portflio/)
+[Click here to view my portfolio](https://sherwin333.github.io/Sherwin_Portfolio/)
 
 ---
 👨‍💻 Built with ❤️ by Sherwin
