@@ -38,31 +38,37 @@ export default function Hero() {
           I work with React to build responsive and interactive user interfaces.
         </p>
 
-        <div className="mt-8 flex items-center gap-4 justify-center md:justify-start">
-          <a
-            href="#projects"
-            className="px-5 py-3 rounded-2xl bg-gradient-to-r from-indigo-500 to-fuchsia-500 hover:from-indigo-400 hover:to-fuchsia-400 shadow-lg shadow-fuchsia-500/20"
-          >
-            View Projects
-          </a>
-          <a
-            href="https://drive.google.com/file/d/1OIn3ezMKtwOaCpBpDt2UYYE-4c6zDOex/view"
-            className="px-5 py-3 rounded-2xl border border-white/15 hover:bg-white/10 mr-3"
-            target="_blank"
-              rel="noopener noreferrer"
-                  >
-              Resume
-          </a>
+        <div className="mt-8 text-center md:text-left">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-4 justify-center md:justify-start">
+                {/* View Projects */}
+                <a
+                  href="#projects"
+                  className="px-5 py-3 rounded-2xl bg-gradient-to-r from-indigo-500 to-fuchsia-500 hover:from-indigo-400 hover:to-fuchsia-400 shadow-lg shadow-fuchsia-500/20"
+                >
+                  View Projects
+                </a>
 
-          <a
-            href="https://drive.google.com/file/d/1qUQG1a9NOoedR7_6PPD8mNu6wWI_7oAN/view"
-            className="px-5 py-3 rounded-2xl border border-white/15 hover:bg-white/10"
-            target="_blank"
-              rel="noopener noreferrer"
-                  >
-              Detailed Resume
-          </a>
-        </div>
+                {/* Resume */}
+                <a
+                  href="https://drive.google.com/file/d/1OIn3ezMKtwOaCpBpDt2UYYE-4c6zDOex/view"
+                  className="px-5 py-3 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 shadow-lg shadow-emerald-500/20"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Resume
+                </a>
+
+                {/* Detailed Resume */}
+                <a
+                  href="https://drive.google.com/file/d/1qUQG1a9NOoedR7_6PPD8mNu6wWI_7oAN/view"
+                  className="px-5 py-3 rounded-2xl bg-gradient-to-r from-amber-500 to-pink-500 hover:from-amber-400 hover:to-pink-400 shadow-lg shadow-amber-500/20"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Detailed Resume
+                </a>
+              </div>
+            </div>
 
         {/* Social icons: GitHub, LinkedIn, Email, HackerRank */}
         <div className="mt-6 flex gap-6 justify-center md:justify-start text-2xl text-gray-300">
