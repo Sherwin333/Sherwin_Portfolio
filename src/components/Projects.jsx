@@ -4,7 +4,7 @@ const projects = [
   {
     title: "NIDS – Network Intrusion Detection System",
     desc: "ML-powered network intrusion detection dashboard with live detection.",
-    tech: ["Python", "ML-Alogrithms", "Honeypot", "Stream-lit"],
+    tech: ["Python", "ML", "Honeypot", "Stream-lit"],
     img: "images/Picture1.png", 
     code: "https://github.com/Sherwin333/Network-Intrusion-Detection-System-NIDS-.git",
   },

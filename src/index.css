@@ -7,7 +7,28 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Optional: nicer default bg & text */
+/* Global background + text */
 body {
   @apply bg-gradient-to-b from-gray-950 via-black to-gray-900 text-white;
+}
+
+/* Contact section wrapper */
+.contact-section {
+  @apply flex justify-center items-center py-16 px-4;
+}
+
+/* Contact form container */
+.form-container {
+  @apply bg-gray-900/90 backdrop-blur-md shadow-2xl rounded-2xl p-8 max-w-lg w-full border border-gray-700;
+}
+
+/* Inputs & textarea */
+.form-container input,
+.form-container textarea {
+  @apply w-full mb-4 bg-gray-800 border border-gray-600 text-white placeholder-gray-400 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-purple-500;
+}
+
+/* Button */
+.form-container button {
+  @apply w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 rounded-md hover:from-purple-400 hover:to-pink-400 transition;
 }
