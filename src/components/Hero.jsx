@@ -60,7 +60,7 @@ export default function Hero() {
 
                 {/* Detailed Resume */}
                 <a
-                  href="https://drive.google.com/file/d/1qUQG1a9NOoedR7_6PPD8mNu6wWI_7oAN/view"
+                  href="https://drive.google.com/file/d/1KT5Z5ks83zVWoM0DBtqkZ3gv46Wzl9gL/view"
                   className="px-5 py-3 rounded-2xl bg-gradient-to-r from-amber-500 to-pink-500 hover:from-amber-400 hover:to-pink-400 shadow-lg shadow-amber-500/20"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -116,7 +116,7 @@ export default function Hero() {
         {/* Glow ring */}
         <div className="absolute -inset-2 bg-gradient-to-tr from-indigo-600 via-fuchsia-600 to-pink-600 rounded-full blur-2xl opacity-40 animate-pulse" />
         <img
-          src={`${process.env.PUBLIC_URL}/images/12.jpg`} // put your image in public/images/profile.jpg
+          src={`${process.env.PUBLIC_URL}/images/13.jpg`} // put your image in public/images/profile.jpg
           alt="Sherwin"
           className="relative w-48 h-48 md:w-64 md:h-64 object-cover rounded-full border-4 border-white/10 shadow-2xl"
         />
