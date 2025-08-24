@@ -50,7 +50,7 @@ export default function Hero() {
 
                 {/* Resume */}
                 <a
-                  href="https://drive.google.com/file/d/1OIn3ezMKtwOaCpBpDt2UYYE-4c6zDOex/view"
+                  href="https://drive.google.com/file/d/1d1LPSbQSjwN3ohzwZn-5AH6KWHUBVRHR/view"
                   className="px-5 py-3 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 shadow-lg shadow-emerald-500/20"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -60,7 +60,7 @@ export default function Hero() {
 
                 {/* Detailed Resume */}
                 <a
-                  href="https://drive.google.com/file/d/1KT5Z5ks83zVWoM0DBtqkZ3gv46Wzl9gL/view"
+                  href="https://drive.google.com/file/d/1MegMm0ahbkyJPMVdH9Pisvn64HBRLMkZ/view"
                   className="px-5 py-3 rounded-2xl bg-gradient-to-r from-amber-500 to-pink-500 hover:from-amber-400 hover:to-pink-400 shadow-lg shadow-amber-500/20"
                   target="_blank"
                   rel="noopener noreferrer"
