@@ -2,6 +2,20 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
+    title: "Skill Tracker – MERN",
+    desc: "A full-stack MERN application to track, manage, and showcase skills & certifications.",
+    tech: ["React", "Node.js", "MongoDB", "Express"],
+    img: "images/skilltracker.png",
+    code: "https://github.com/Sherwin333/Skill-Tracker-MERN",
+  },
+  {
+    title: "Smart Task Manager",
+    desc: "A lightweight Task Management System backend inspired by Trello/Jira, built with Spring Boot. It provides REST APIs, JWT-based authentication, and database support to power the frontend.",
+    tech: ["Spring Boot", "JWT", "REST API", "MySQL"],
+    img: "images/taskmanager.png",
+    code: "https://github.com/Sherwin333/Smart-Task-Manager",
+  },
+  {
     title: "NIDS – Network Intrusion Detection System",
     desc: "ML-powered network intrusion detection dashboard with live detection.",
     tech: ["Python", "ML", "Honeypot", "Streamlit"],
@@ -14,13 +28,6 @@ const projects = [
     tech: ["Flutter", "MySQL"],
     img: "images/Picture2.png",
     code: "https://github.com/Sherwin333/PawConnect-Flutter-App.git",
-  },
-  {
-    title: "QPGS – Question Paper Generation System",
-    desc: "Automated platform for generating customized question papers.",
-    tech: ["Vite+React", "Node.js", "MongoDB"],
-    img: "images/3.png",
-    code: "https://github.com/Sherwin333/Question-Paper-Generation-System-QPGS-.git",
   },
 ];
 
@@ -42,11 +49,12 @@ export default function Projects() {
           </span>
         </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {/* ✅ Fixed Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
           {projects.map((p, i) => (
             <motion.article
               key={p.title}
-              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl hover:shadow-xl hover:shadow-fuchsia-500/20 transition-all duration-500"
+              className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl hover:shadow-xl hover:shadow-fuchsia-500/20 transition-all duration-500"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -64,9 +72,11 @@ export default function Projects() {
               </div>
 
               {/* Content */}
-              <div className="p-6 space-y-4">
+              <div className="p-6 flex flex-col flex-grow space-y-4">
                 <h3 className="text-xl font-semibold">{p.title}</h3>
-                <p className="text-gray-300 text-sm leading-relaxed">{p.desc}</p>
+                <p className="text-gray-300 text-sm leading-relaxed flex-grow">
+                  {p.desc}
+                </p>
 
                 <ul className="flex flex-wrap gap-2">
                   {p.tech.map((t) => (
@@ -85,7 +95,7 @@ export default function Projects() {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="mt-3 inline-block w-full text-center px-4 py-2 rounded-xl bg-gradient-to-r from-indigo-500 to-fuchsia-500 hover:from-indigo-400 hover:to-fuchsia-400 text-white font-medium shadow-lg"
+                  className="mt-4 inline-block w-full text-center px-4 py-2 rounded-xl bg-gradient-to-r from-indigo-500 to-fuchsia-500 hover:from-indigo-400 hover:to-fuchsia-400 text-white font-medium shadow-lg"
                 >
                   View on GitHub
                 </motion.a>
