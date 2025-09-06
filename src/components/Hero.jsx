@@ -80,7 +80,7 @@ export default function Hero() {
 
           {/* Resume (new tab) */}
           <motion.a
-            href="https://drive.google.com/file/d/1E01tNtqpUmPvkPNmS9DIEgAnQssIr6ib/view"
+            href="https://drive.google.com/file/d/1qsLJ60HBlMWlFiwIkvXbN5y1pvMNZ7bY/view"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05, rotate: 1 }}
@@ -92,7 +92,7 @@ export default function Hero() {
 
           {/* Detailed Resume (new tab) */}
           <motion.a
-            href="https://drive.google.com/file/d/1kuKQN3N_oG0e0mmmVfxftYDHlik9A4ak/view"
+            href="https://drive.google.com/file/d/1cWJ-__sRgcRBzu2qc6Xjc2SUeSDdpZcA/view"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05, rotate: 1 }}
