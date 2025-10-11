@@ -222,7 +222,7 @@ export default function Hero() {
           </motion.button>
 
           <motion.a
-            href="https://drive.google.com/file/d/1qsLJ60HBlMWlFiwIkvXbN5y1pvMNZ7bY/view"
+            href="https://drive.google.com/file/d/1-wuaWu0pHsQ_b6NeusMQaj-ENGaAQOrz/view"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={shouldReduceMotion ? {} : { scale: 1.05, y: -2 }}
@@ -234,7 +234,7 @@ export default function Hero() {
           </motion.a>
 
           <motion.a
-            href="https://drive.google.com/file/d/1cWJ-__sRgcRBzu2qc6Xjc2SUeSDdpZcA/view"
+            href="https://drive.google.com/file/d/1ajquss3YNw-E0XLIrtn0E2X5fcLaowGa/view"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={shouldReduceMotion ? {} : { scale: 1.05, y: -2 }}
