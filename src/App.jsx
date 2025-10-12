@@ -28,8 +28,9 @@ export default function App() {
           <Navbar />
           <main className="pt-20">
             <Hero />
-            <Skills />
+            
             <About />
+            <Skills />
             <Education /> {/* ✅ new section added here */}
             <Projects />
             <Contact />
