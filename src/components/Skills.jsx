@@ -1,199 +1,119 @@
-import { motion, useReducedMotion } from "framer-motion";
-import {
-  FaReact, FaNodeJs, FaGithub, FaJava, FaPython, FaPhp, FaAndroid
-} from "react-icons/fa";
-import {
-  SiJavascript, SiHtml5, SiCss3, SiMysql, SiMongodb, SiFlutter, SiKotlin, SiLinux, SiSalesforce
-} from "react-icons/si";
+import { motion } from "framer-motion";
+import { FaReact, FaNodeJs, FaGithub, FaJava, FaPython, FaPhp, FaAndroid } from "react-icons/fa";
+import { SiJavascript, SiHtml5, SiCss3, SiMysql, SiMongodb, SiFlutter, SiKotlin, SiLinux, SiSalesforce } from "react-icons/si";
 
-const skillCategories = [
+const categories = [
   {
-    title: "Languages",
-    color: "from-amber-500 to-orange-500",
+    title: "Languages", accent: "#f59e0b",
     skills: [
-      { name: "Java", icon: <FaJava />, color: "text-orange-500" },
-      { name: "Python", icon: <FaPython />, color: "text-blue-400" },
-      { name: "JavaScript", icon: <SiJavascript />, color: "text-yellow-400" },
-      { name: "PHP", icon: <FaPhp />, color: "text-indigo-400" },
-      { name: "Kotlin", icon: <SiKotlin />, color: "text-purple-400" },
+      { name: "Java",       icon: <FaJava />,       color: "#f97316" },
+      { name: "Python",     icon: <FaPython />,     color: "#60a5fa" },
+      { name: "JavaScript", icon: <SiJavascript />, color: "#fbbf24" },
+      { name: "PHP",        icon: <FaPhp />,        color: "#818cf8" },
+      { name: "Kotlin",     icon: <SiKotlin />,     color: "#c084fc" },
     ],
   },
   {
-    title: "Web Development",
-    color: "from-cyan-500 to-blue-500",
+    title: "Web & Mobile", accent: "#22d3ee",
     skills: [
-      { name: "React", icon: <FaReact />, color: "text-cyan-400" },
-      { name: "HTML", icon: <SiHtml5 />, color: "text-orange-500" },
-      { name: "CSS", icon: <SiCss3 />, color: "text-blue-500" },
-      { name: "Flutter", icon: <SiFlutter />, color: "text-sky-400" },
-      { name: "Node.js", icon: <FaNodeJs />, color: "text-green-500" },
+      { name: "React",   icon: <FaReact />,   color: "#22d3ee" },
+      { name: "HTML",    icon: <SiHtml5 />,   color: "#f97316" },
+      { name: "CSS",     icon: <SiCss3 />,    color: "#60a5fa" },
+      { name: "Flutter", icon: <SiFlutter />, color: "#38bdf8" },
+      { name: "Node.js", icon: <FaNodeJs />,  color: "#4ade80" },
     ],
   },
   {
-    title: "Databases",
-    color: "from-emerald-500 to-teal-500",
+    title: "Data & Cloud", accent: "#4ade80",
     skills: [
-      { name: "MySQL", icon: <SiMysql />, color: "text-blue-500" },
-      { name: "MongoDB", icon: <SiMongodb />, color: "text-green-500" },
-      { name: "Salesforce", icon: <SiSalesforce />, color: "text-sky-400" },
+      { name: "MySQL",      icon: <SiMysql />,      color: "#60a5fa" },
+      { name: "MongoDB",    icon: <SiMongodb />,    color: "#4ade80" },
+      { name: "Salesforce", icon: <SiSalesforce />, color: "#38bdf8" },
     ],
   },
   {
-    title: "Tools & Platforms",
-    color: "from-fuchsia-500 to-purple-500",
+    title: "Tools", accent: "#a78bfa",
     skills: [
-      { name: "Git", icon: <FaGithub />, color: "text-gray-200" },
-      { name: "Linux", icon: <SiLinux />, color: "text-yellow-400" },
-      { name: "Android Studio", icon: <FaAndroid />, color: "text-green-400" },
+      { name: "Git",            icon: <FaGithub />,  color: "#e2e8f0" },
+      { name: "Linux",          icon: <SiLinux />,   color: "#fbbf24" },
+      { name: "Android Studio", icon: <FaAndroid />, color: "#4ade80" },
     ],
   },
 ];
 
 export default function Skills() {
-  const shouldReduceMotion = useReducedMotion();
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: shouldReduceMotion ? 0 : 0.15,
-        delayChildren: shouldReduceMotion ? 0 : 0.2,
-      },
-    },
-  };
-
-  const categoryVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
-    },
-  };
-
-  const skillVariants = {
-    hidden: { scale: 0, opacity: 0 },
-    visible: {
-      scale: 1,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        stiffness: 200,
-        damping: 15,
-      },
-    },
-  };
-
   return (
-    <section
-      id="skills"
-      className="relative px-6 py-24 bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white overflow-hidden"
-    >
-      <div className="absolute top-20 left-20 w-[500px] h-[500px] bg-fuchsia-600/20 rounded-full blur-3xl animate-blob" aria-hidden="true"></div>
-      <div className="absolute bottom-10 right-10 w-[500px] h-[500px] bg-indigo-600/20 rounded-full blur-3xl animate-blob animation-delay-2000" aria-hidden="true"></div>
+    <section id="skills" className="relative px-6 py-32 overflow-hidden"
+      style={{ background: "#07070a", fontFamily: "-apple-system, BlinkMacSystemFont, sans-serif" }}>
+      <div className="absolute top-0 inset-x-0 h-px" style={{ background: "linear-gradient(90deg, transparent, rgba(99,102,241,0.3), transparent)" }} />
 
-      <div className="relative mx-auto max-w-6xl z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
-            My{" "}
-            <span className="bg-gradient-to-r from-fuchsia-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">
-              Tech Stack
-            </span>
-          </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            A comprehensive toolkit of languages, frameworks, and technologies I use to build modern applications
-          </p>
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full pointer-events-none"
+        style={{ background: "radial-gradient(circle, rgba(168,85,247,0.06), transparent 65%)" }} />
+
+      <div className="relative mx-auto max-w-5xl z-10">
+        <motion.div initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
+          transition={{ duration: 0.5 }} className="flex items-center gap-3 mb-5">
+          <div className="h-px w-8" style={{ background: "linear-gradient(90deg, #a855f7, transparent)" }} />
+          <span className="text-[11px] tracking-[0.25em] uppercase font-medium" style={{ color: "#c084fc" }}>Skills</span>
         </motion.div>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
-        >
-          {skillCategories.map((category, i) => (
-            <motion.div
-              key={category.title}
-              variants={categoryVariants}
-              className="group relative bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-2xl p-6 backdrop-blur-xl hover:border-white/20 transition-all duration-500"
-              whileHover={shouldReduceMotion ? {} : { y: -8, scale: 1.02 }}
-            >
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none" 
-                style={{ backgroundImage: `linear-gradient(to bottom right, var(--tw-gradient-stops))` }}
-                aria-hidden="true"
-              >
-                <div className={`w-full h-full bg-gradient-to-br ${category.color}`}></div>
+        <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          className="text-[38px] md:text-[54px] font-bold tracking-[-0.03em] leading-[1.1] mb-16">
+          <span style={{ color: "rgba(255,255,255,0.9)" }}>Tech Stack</span>
+          <br />
+          <span style={{ background: "linear-gradient(135deg, #c084fc, #818cf8)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+            & Tools
+          </span>
+        </motion.h2>
+
+        <div className="grid md:grid-cols-2 gap-4">
+          {categories.map((cat, ci) => (
+            <motion.div key={cat.title}
+              initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: ci * 0.1, ease: [0.22, 1, 0.36, 1] }}
+              className="p-6 rounded-2xl transition-all duration-300 group"
+              style={{ background: "rgba(255,255,255,0.025)", border: "1px solid rgba(255,255,255,0.07)" }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = `${cat.accent}35`; e.currentTarget.style.background = `${cat.accent}07`; }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.07)"; e.currentTarget.style.background = "rgba(255,255,255,0.025)"; }}>
+
+              {/* Category header */}
+              <div className="flex items-center gap-2 mb-6">
+                <div className="w-1 h-4 rounded-full" style={{ background: cat.accent }} />
+                <h3 className="text-[12px] tracking-[0.15em] uppercase font-semibold" style={{ color: cat.accent }}>
+                  {cat.title}
+                </h3>
               </div>
 
-              <div className="relative space-y-6">
-                <div className="flex flex-col items-center">
-                  <h3 className="text-xl font-bold text-white mb-2">{category.title}</h3>
-                  <div className={`w-16 h-1 bg-gradient-to-r ${category.color} rounded-full`}></div>
-                </div>
-
-                <motion.div 
-                  className="grid grid-cols-3 gap-4"
-                  variants={containerVariants}
-                >
-                  {category.skills.map((skill, skillIndex) => (
-                    <motion.div
-                      key={skill.name}
-                      variants={skillVariants}
-                      whileHover={shouldReduceMotion ? {} : { scale: 1.15, rotate: 5 }}
-                      className="flex flex-col items-center gap-2 group/skill cursor-default"
-                    >
-                      <div className={`relative p-3 rounded-xl bg-white/5 border border-white/10 group-hover/skill:border-white/30 transition-all duration-300 ${skill.color}`}>
-                        <div className="text-3xl">{skill.icon}</div>
-                        
-                        <motion.div
-                          className="absolute -inset-1 rounded-xl opacity-0 group-hover/skill:opacity-20 blur-lg transition-opacity"
-                          style={{ backgroundColor: skill.color }}
-                          aria-hidden="true"
-                        />
-                      </div>
-                      <span className="text-xs text-gray-400 group-hover/skill:text-white transition-colors text-center leading-tight">
-                        {skill.name}
-                      </span>
-                    </motion.div>
-                  ))}
-                </motion.div>
+              <div className="grid grid-cols-5 gap-3">
+                {cat.skills.map((skill, si) => (
+                  <motion.div key={skill.name}
+                    initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: ci * 0.05 + si * 0.04 }}
+                    whileHover={{ y: -4, scale: 1.1 }}
+                    className="flex flex-col items-center gap-1.5 cursor-default group/skill">
+                    <div className="p-2.5 rounded-xl transition-all duration-200"
+                      style={{ background: `${skill.color}10`, border: `1px solid ${skill.color}20`, fontSize: "22px", color: skill.color, opacity: 0.6 }}
+                      onMouseEnter={e => { e.currentTarget.style.opacity = "1"; e.currentTarget.style.boxShadow = `0 0 16px ${skill.color}30`; }}
+                      onMouseLeave={e => { e.currentTarget.style.opacity = "0.6"; e.currentTarget.style.boxShadow = "none"; }}>
+                      {skill.icon}
+                    </div>
+                    <span className="text-[10px] font-light text-center leading-tight"
+                      style={{ color: "rgba(255,255,255,0.3)" }}>
+                      {skill.name}
+                    </span>
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16 text-center"
-        >
-          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-fuchsia-500/10 to-indigo-500/10 border border-fuchsia-500/30">
-            <motion.div
-              animate={shouldReduceMotion ? {} : { rotate: 360 }}
-              transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-            >
-              <svg className="w-5 h-5 text-fuchsia-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
-              </svg>
-            </motion.div>
-            <span className="text-fuchsia-300 font-medium">
-              Always learning and exploring new technologies
-            </span>
-          </div>
-        </motion.div>
+        <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
+          transition={{ delay: 0.5 }} className="mt-10 text-[13px] font-light"
+          style={{ color: "rgba(255,255,255,0.2)" }}>
+          Always learning — currently exploring generative AI and LLM integrations.
+        </motion.p>
       </div>
     </section>
   );
