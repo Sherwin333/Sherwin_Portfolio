@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const ROLES = ["Software Developer", "Full-Stack Engineer", "AI Enthusiast"];
+const ROLES = ["Java Full Stack Developer", "AI Application Developer", "Spring Boot Engineer"];
 
 const SOCIALS = [
   { label: "GitHub", href: "https://github.com/Sherwin333", color: "#e2e8f0",
@@ -103,14 +103,17 @@ export default function Hero() {
             </motion.div>
 
             {/* Description */}
-            <motion.p {...fade(0.4)}
-              className="text-[16px] leading-relaxed mb-10 max-w-md mx-auto md:mx-0 font-light"
-              style={{ color: "rgba(255,255,255,0.35)" }}>
-              MCA graduate crafting scalable, modern web experiences. Focused on{" "}
-              <span style={{ color: "rgba(165,180,252,0.7)" }}>React</span>,{" "}
-              <span style={{ color: "rgba(165,180,252,0.7)" }}>Node.js</span>, and{" "}
-              <span style={{ color: "rgba(165,180,252,0.7)" }}>AI/ML</span> systems.
-            </motion.p>
+           <motion.p
+  className="text-[16px] leading-relaxed mb-10 max-w-lg mx-auto md:mx-0 font-light"
+  style={{ color: "rgba(255,255,255,0.35)" }}
+>
+  Java Full Stack Developer building scalable applications with
+  <span style={{ color: "#818cf8" }}> Spring Boot</span>,
+  <span style={{ color: "#818cf8" }}> React</span>,
+  <span style={{ color: "#818cf8" }}> REST APIs</span> and
+  <span style={{ color: "#c084fc" }}> AI-powered solutions</span>.
+  Passionate about Generative AI, LLM applications, and modern cloud-native development.
+</motion.p>
 
             {/* CTAs */}
             <motion.div {...fade(0.5)} className="flex flex-wrap gap-3 justify-center md:justify-start mb-10">
